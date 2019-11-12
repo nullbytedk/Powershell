@@ -333,7 +333,7 @@ try {
     $codeExePath = $codePlatformInfo.ExePath
 
     # Install any extensions
-    $extensions = @("ms-vscode.PowerShell") + $AdditionalExtensions
+    $extensions = @("ms-vscode.PowerShell","pkief.material-icon-theme") + $AdditionalExtensions
     if ($PSCmdlet.ShouldProcess(($extensions -join ','), "$codeExePath --install-extension")) {    
         foreach ($extension in $extensions) {
             Write-Host "`nInstalling extension $extension..." -ForegroundColor Yellow
